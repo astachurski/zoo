@@ -7,15 +7,20 @@ public class Animal {
     private String name;
     private Integer hungerLevel;// = 50;
 
-    public Animal() {
+    Animal() {
         hungerLevel = 50;
         name = " unnamed animal ";
         System.out.println("hello from Animal constructor");
     }
 
-    public Animal(Integer hungerLevel) {
+    Animal(Integer hungerLevel) {
         this.hungerLevel = hungerLevel;
         System.out.println("hello from Animal(hungerLevel) constructor");
+    }
+
+    public Animal(String name, Integer hungerLevel) {
+        this.name = name;
+        this.hungerLevel = hungerLevel;
     }
 
     public Integer getHungerLevel() {
@@ -81,6 +86,6 @@ public class Animal {
     @Override
     public String toString() {
         //return super.toString();
-        return "I'm Animal and my name is:" + name;
+        return this.getClass().getCanonicalName() + ": I'm Animal and my name is:" + name;
     }
 }

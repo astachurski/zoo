@@ -11,7 +11,6 @@ public class SiberianTiger extends Tiger {
 
     public SiberianTiger(String name, Integer hungerLevel) {
         super(name, hungerLevel);
-        System.out.println("Siberian tiger created!");
     }
 
     @Override
