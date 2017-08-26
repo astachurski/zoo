@@ -1,4 +1,4 @@
-package com.zoo;
+package app;
 
 public class Main {
 
