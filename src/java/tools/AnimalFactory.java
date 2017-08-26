@@ -16,6 +16,7 @@ public class AnimalFactory {
 
         animals.add(new SiberianTiger("johny", 82));
         animals.add(new Snake("bobby", 12));
+        animals.add(new Snake("pytonus", 99));
         animals.add(new Elephant("franek", 89));
         animals.add(new Tiger("misio", 23));
 

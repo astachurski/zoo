@@ -1,7 +1,9 @@
 package app;
 
 import com.zoo.animals.Animal;
+import com.zoo.animals.Snake;
 import com.zoo.animals.rare.SiberianTiger;
+import com.zoo.infrastructure.Building;
 import tools.AnimalFactory;
 
 import java.util.List;
@@ -23,11 +25,23 @@ public class Main {
 
         List<Animal> animalList = AnimalFactory.getAnimals();
 
+        Building bigAnimalsBuilding = new Building("big animals building");
+        Building smallAnimalsBuilding = new Building("small animals building");
+
         for (Animal animal : animalList) {
+
+            if (animal instanceof Snake) {
+                smallAnimalsBuilding.addAnimal(animal);
+            } else
+                bigAnimalsBuilding.addAnimal(animal);
 
             System.out.println(animal.getName() + " " + animal.toString());
             animal.makeSound();
             System.out.println(" -------- ");
+
+            smallAnimalsBuilding.getAnimalNames();
+            System.out.println(" --- ");
+            bigAnimalsBuilding.getAnimalNames();
 
         }
 
