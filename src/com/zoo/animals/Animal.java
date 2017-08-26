@@ -1,11 +1,14 @@
 package com.zoo.animals;
 
+import com.zoo.infrastructure.Building;
+
 public class Animal {
     private String color;
     private Integer legCount;
     private Integer weight;
     private String name;
     private Integer hungerLevel;// = 50;
+    private Building building;
 
     Animal() {
         hungerLevel = 50;
@@ -21,6 +24,15 @@ public class Animal {
     public Animal(String name, Integer hungerLevel) {
         this.name = name;
         this.hungerLevel = hungerLevel;
+    }
+
+    public void setBuilding(Building building) {
+        this.building = building;
+    }
+
+
+    public Building getBuilding() {
+        return building;
     }
 
     public Integer getHungerLevel() {

@@ -16,6 +16,7 @@ public class Building {
     }
 
     public void addAnimal(Animal animal) {
+        animal.setBuilding(this);
         animalList.add(animal);
     }
 
@@ -25,4 +26,18 @@ public class Building {
         }
     }
 
+    public String getName() {
+        return name;
+    }
+
+    public Animal getAnimalByName(String name) {
+        Animal result = null;
+        for (Animal animal : animalList) {
+            if (animal.getName().equals(name)) {
+                result = animal;
+                break;
+            }
+        }
+        return result;
+    }
 }

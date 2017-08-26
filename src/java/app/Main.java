@@ -35,15 +35,17 @@ public class Main {
             } else
                 bigAnimalsBuilding.addAnimal(animal);
 
-            System.out.println(animal.getName() + " " + animal.toString());
-            animal.makeSound();
-            System.out.println(" -------- ");
-
-            smallAnimalsBuilding.getAnimalNames();
-            System.out.println(" --- ");
-            bigAnimalsBuilding.getAnimalNames();
-
+            System.out.println(" animal: " + animal.getName() + " is in building: " + animal.getBuilding().getName());
         }
+
+        smallAnimalsBuilding.getAnimalNames();
+        System.out.println(" --- ");
+        bigAnimalsBuilding.getAnimalNames();
+
+        Animal foundAnimal = bigAnimalsBuilding.getAnimalByName("johny");
+
+        System.out.println("found animal is: " + foundAnimal.toString());
+
 
 
     }
